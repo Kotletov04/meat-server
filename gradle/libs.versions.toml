@@ -1,0 +1,32 @@
+[versions]
+kotlin = "2.0.20"
+springframework-boot = "3.5.3"
+spring-dependency-management = "1.1.7"
+jackson = "2.21.2"
+liquibase = "5.0.2"
+postgresql = "42.7.10"
+hibernate = "7.3.0.Final"
+postgres-driver = "42.7.10"
+
+[libraries]
+springframework-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web", version.ref = "springframework-boot"}
+# springframework-boot-starter-data-jdbc = { group = "org.springframework.boot", name = "spring-boot-starter-data-jdbc", version.ref = "springframework-boot"}
+springframework-boot-starter-data-jpa = { group = "org.springframework.boot", name = "spring-boot-starter-data-jpa", version.ref = "springframework-boot"}
+kotlin-stdlib-jdk8 = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib-jdk8", version.ref = "kotlin"}
+liquibase-core = { group = "org.liquibase", name = "liquibase-core", version.ref = "liquibase"}
+postgresql = { group = "org.postgresql", name = "postgresql", version.ref = "postgresql"}
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin"}
+jackson-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin", version.ref = "jackson"}
+kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlin"}
+
+hibernate-orm = { group = "org.hibernate.orm", name = "hibernate-core", version.ref = "hibernate"}
+postgresql-driver = { group = "org.postgresql", name = "postgresql", version.ref = "postgres-driver"}
+
+
+[plugins]
+springframework-boot = { id = "org.springframework.boot", version.ref = "springframework-boot"}
+spring-dependency-management = { id = "io.spring.dependency-management", version.ref = "spring-dependency-management"}
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-spring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotlin" }
+kotlin-jpa = { id = "org.jetbrains.kotlin.plugin.jpa", version.ref = "kotlin"}
+kotlin-allopen = { id = "org.jetbrains.kotlin.plugin.allopen"}
