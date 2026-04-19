@@ -1,0 +1,7 @@
+build:
+  stage: build
+  script:
+    - ./gradlew clean :server:bootJar
+  artifacts:
+    paths:
+      - server/build/libs/*.jar

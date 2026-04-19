@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/arhont" />
             <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/core/caching" />
             <option value="$PROJECT_DIR$/core/common" />

@@ -7,6 +7,7 @@ liquibase = "5.0.2"
 postgresql = "42.7.10"
 hibernate = "7.3.0.Final"
 postgres-driver = "42.7.10"
+kotlin-coroutines = "1.10.2"
 
 [libraries]
 springframework-boot-starter-web = { group = "org.springframework.boot", name = "spring-boot-starter-web", version.ref = "springframework-boot"}
@@ -17,7 +18,7 @@ liquibase-core = { group = "org.liquibase", name = "liquibase-core", version.ref
 postgresql = { group = "org.postgresql", name = "postgresql", version.ref = "postgresql"}
 kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlin"}
 jackson-kotlin = { group = "com.fasterxml.jackson.module", name = "jackson-module-kotlin", version.ref = "jackson"}
-kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlin"}
+kotlinx-coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlin-coroutines"}
 
 hibernate-orm = { group = "org.hibernate.orm", name = "hibernate-core", version.ref = "hibernate"}
 postgresql-driver = { group = "org.postgresql", name = "postgresql", version.ref = "postgres-driver"}

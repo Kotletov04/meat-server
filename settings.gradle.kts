@@ -33,3 +33,4 @@ findProject(":core:security")?.name = "security"
 include("server")
 include("core:caching")
 findProject(":core:caching")?.name = "caching"
+include("arhont")

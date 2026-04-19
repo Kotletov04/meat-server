@@ -1,0 +1,10 @@
+image: eclipse-temurin:21
+
+include:
+  - local: 'stages/.gitlab-build.yml'
+  - local: 'stages/.gitlab-deploy.yml'
+
+stages:
+  - build
+  - tests
+  - deploy

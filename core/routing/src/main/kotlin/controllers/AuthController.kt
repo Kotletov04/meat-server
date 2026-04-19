@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 import usecases.RegistrationUseCase
+import kotlin.coroutines.CoroutineContext
 
 
 @RestController
@@ -20,6 +21,7 @@ class AuthController(
 
     @PostMapping("/login")
     suspend fun login(@RequestBody loginBody: LoginDto): Status<UserDto> {
+        val test =
         return Status.Success(data = UserDto(id = 1))
     }
 

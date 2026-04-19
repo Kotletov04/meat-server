@@ -1,0 +1,35 @@
+name: Mirror to Gitlab
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      # берем всё
+      - name: Checkout code
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      # кидаем на гитлаб
+      - name: Push to Gitlab
+        env:
+          SECRET: ${{ secrets.SECRET }}
+        run: |
+          git remote add gitlab https://oauth2:${SECRET}@gitlab.com/Kotletov04/meat-server.git
+          git push gitlab --all
+          git push gitlab --tags
+      #запускаем пайплайн
+      - name: Trigger Gitlab pipeline
+        env:
+          SECRET_TRIGGER: ${{ secrets.GITLAB_TRIGGER_TOKEN }}
+        run: |
+          curl -v -X POST "https://gitlab.com/api/v4/projects/75687010/trigger/pipeline" \
+            -F token=${SECRET_TRIGGER} \
+            -F ref=master
