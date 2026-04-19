@@ -2,6 +2,7 @@ image: eclipse-temurin:21
 
 include:
   - local: 'stages/.gitlab-build.yml'
+  - local: 'stages/.gitlab-build-container.yml'
   - local: 'stages/.gitlab-deploy.yml'
 
 stages:
